@@ -1,2 +1,1 @@
-# LSTM_Tensorflow_Seq2Seq_Model
-Implementation of simple Seq2Seq molel using Recurrent Neural Networks
+Implementation of simple Seq2Seq molel using Recurrent Neural Networks. Here, we reconstruct the input sequence using a bidirectional encoder and a unidirectional decoder. 
