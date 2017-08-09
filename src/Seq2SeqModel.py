@@ -1,5 +1,5 @@
 ## Implementing Sequencing Modelling
-## will try to make a bi-directional encoder and decoder using tensor flow
+## Building a bi-directional encoder and decoder using tensor flow
 ## So we can talk about the future and the past both, via model using pattern recognition 
 import tensorflow as tf # this is for ML
 import helpers as helpers
@@ -78,7 +78,7 @@ b = tf.Variable(tf.zeros([vocab_size]),dtype = tf.float32)
 
 
 #create padded inputs for the decoder from the word embeddings
-#were telling the program to test a condition, and trigger an error if the condition is false.
+#testing a condition, and triggeing an error if the condition is false.
 assert EOS == 1 and PAD == 0
 
 eos_time_slice = tf.ones([batch_size], dtype=tf.int32, name='EOS')
@@ -93,7 +93,7 @@ pad_step_embedded = tf.nn.embedding_lookup(embeddings, pad_time_slice)
 
 
 #manually specifying loop function through time - to get initial cell state and input to RNN
-#normally we'd just use dynamic_rnn, but lets get detailed here with raw_rnn
+#normally we did use dynamic_rnn, but lets get detailed here with the raw_rnn
 
 #we define and return these values, no operations occur here
 def loop_fn_initial():
